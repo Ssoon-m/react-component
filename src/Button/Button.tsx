@@ -22,6 +22,10 @@ interface ButtonProps extends Styled.ButtonType {
   children: JSX.Element;
 }
 
+/**
+- 공통 버튼입니다.
+- 사이즈 조절, 색상 조절 등이 가능합니다.
+**/
 const Button: React.FC<ButtonProps> = ({
   size = 'small',
   color = 'white',

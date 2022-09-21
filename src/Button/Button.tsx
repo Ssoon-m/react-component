@@ -19,7 +19,7 @@ interface ButtonProps extends Styled.ButtonType {
   /**
    * 버튼 내용
    */
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 /**

@@ -4,6 +4,7 @@
   "description": "cccv design-system",
   "module": "dist/index.js",
   "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ssoon-m/react-component"

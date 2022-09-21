@@ -2,7 +2,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
-import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import url from 'rollup-plugin-url';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -13,7 +12,7 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx']; // 어떤 확장자를 처리
 process.env.BABEL_ENV = 'production';
 
 export default {
-  input: './src/index.ts', // 어떤 파일부터 불러올지 정함.
+  input: './src/index.tsx', // 어떤 파일부터 불러올지 정함.
   plugins: [
     peerDepsExternal() /* peerDependencies로 설치한 라이브러리들을 external 모듈로 설정
                                즉, 번들링된 결과에 포함시키지 않음 */,

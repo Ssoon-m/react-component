@@ -33,11 +33,15 @@ const SliderPopUp: React.FC<popUpContentsType> = ({ popUpContents }) => {
         <CommonStyled.Container pt={51} pl={24} pr={24} pb={24}>
           <Styled.Block>
             <Styled.MainContainer>
-              <Styled.MainWrapper ref={MainWrapperRefs}>
+              <Styled.MainWrapper
+                ref={MainWrapperRefs}
+                data-testid='mainWrapper'
+              >
                 {popUpContents.map((item, i) => (
                   <Styled.ContentsWrapper
                     key={item.id}
                     ref={(el) => (ContentsWrapperRefs.current[i + 1] = el)}
+                    data-testid={`contentsWrapper${i + 1}`}
                   >
                     <Styled.ImageWrapper src={item.imgSrc} alt={'logo'} />
                     <Styled.Description
